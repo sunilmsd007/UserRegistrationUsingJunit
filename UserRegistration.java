@@ -9,5 +9,10 @@ public class UserRegistration {
 		Matcher matcher = pattern.matcher(firstname);
 		return matcher.matches();
 	}
+        public boolean validateLastName(String lastname) {
+		Pattern pattern= Pattern.compile("[A-Z][a-z]{2,}");
+		Matcher matcher = pattern.matcher(lastname);
+		return matcher.matches();
+	}
 
 }
