@@ -19,4 +19,9 @@ public class UserRegistration {
 		Matcher matcher = pattern.matcher(email);
 		return matcher.matches();
 	}
+	public boolean validatePhoneNumber(String phonenumber) {
+		Pattern pattern = Pattern.compile("[0-9]{2} [0-9]{10}");
+		Matcher matcher = pattern.matcher(phonenumber);
+		return matcher.matches();
+	}
 }
