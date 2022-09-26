@@ -11,7 +11,6 @@ public class UserRegistrationTest {
 		boolean result= user.validateFirstName("Sunil");
 		Assert.assertEquals(true, result);
 	}
-	
 	@Test
 	public void returnInvalidFirstName() {
 		boolean result = user.validateFirstName("sunil");
@@ -22,7 +21,6 @@ public class UserRegistrationTest {
 		boolean result= user.validateFirstName("Kumar");
 		Assert.assertEquals(true, result);
 	}
-	
 	@Test
 	public void returnInvalidlastName() {
 		boolean result = user.validateFirstName("kumar");
@@ -48,4 +46,14 @@ public class UserRegistrationTest {
 		boolean result= user.validatePhoneNumber("919164144279");
 		Assert.assertEquals(false, result);
 	}
+        @Test
+        public void returnValidPassword() {
+                boolean result= user.validatePassWord("A1@aS7ft");
+                Assert.assertEquals(true, result);
+        }
+        @Test
+        public void returnInvalidPassword() {
+                boolean result= user.validatePassWord("aw1@sdf");
+                Assert.assertEquals(false, result);
+        }
 }
