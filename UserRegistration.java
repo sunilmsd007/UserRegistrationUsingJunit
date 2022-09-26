@@ -24,4 +24,9 @@ public class UserRegistration {
 		Matcher matcher = pattern.matcher(phonenumber);
 		return matcher.matches();
 	}
+        public boolean validatePassWord(String password) {
+                Pattern pattern = Pattern.compile("[A-Z]+[0-9]+[@$&#]{1}\\w{5,}");
+                Matcher matcher = pattern.matcher(password);
+                return matcher.matches();
+        }
 }
